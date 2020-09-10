@@ -17,7 +17,7 @@ describe('Nav Menus', () => {
     })
 
 /**
- * This returns true if the operand inputArg is a String.
+ * This function clicks the navigation link and assserts that the new page is loaded sucessfully 
  * @item data-tracker-id of the menu item link
  * @expectedUrl Expected target page url
  */
