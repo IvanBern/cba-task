@@ -55,7 +55,7 @@ describe("Translation API Tests", function () {
 
 
     it("Test Translation from En to Fr - 404", function () {
-        expect(getTranslation('xx', 'fr', 'NotExistentWord')).to.have.status(404);
+        expect(getTranslation('en', 'fr', 'NotExistentWord')).to.have.status(404);
         return chakram.wait();
     });
 
