@@ -1,35 +1,22 @@
 {
   "name": "cba-task",
   "version": "1.0.0",
-  "description": "``` npm install cypress --save-dev ```",
+  "description": "CBA Task",
   "main": "index.js",
-  "dependencies": {
-    "cypress": "^14.4.1"
-  },
-  "devDependencies": {
-    "chakram": "^1.5.0",
-    "cypress-mochawesome-reporter": "^3.5.1",
-    "eslint": "^7.9.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-chai-friendly": "^0.6.0",
-    "eslint-plugin-cypress": "^2.11.1",
-    "eslint-plugin-import": "^2.22.0",
-    "mocha": "^11.6.0",
-    "mochawesome": "^7.1.3",
-    "mochawesome-merge": "^4.3.0",
-    "mochawesome-report-generator": "^6.2.0"
-  },
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix",
-    "test": "mocha",
-    "cypress:open": "cypress open",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "cy:run": "cypress run",
-    "cy:run:chrome": "cypress run --browser chrome",
-    "cy:run:firefox": "cypress run --browser firefox",
-    "cy:report": "cypress run && mochawesome-merge cypress/results/*.json > cypress/results/report.json && mochawesome-report-generator cypress/results/report.json -o cypress/results/html",
-    "cy:report:open": "open cypress/results/html/report.html"
+    "cy:open": "cypress open",
+    "cy:run:mobile": "cypress run --config viewportWidth=375,viewportHeight=812",
+    "cy:open:mobile": "cypress open --config viewportWidth=375,viewportHeight=812",
+    "cy:report": "cypress run --reporter cypress-mochawesome-reporter",
+    "cy:report:mobile": "cypress run --config viewportWidth=375,viewportHeight=812 --reporter cypress-mochawesome-reporter"
   },
-  "author": "ivan.bernikov@gmail.com",
-  "license": "ISC"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.6",
+    "cypress-mochawesome-reporter": "^3.5.1"
+  }
 }
