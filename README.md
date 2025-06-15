@@ -1,4 +1,116 @@
-# CBA Test Task
+# CBA Navigation Menu Tests
+
+This project contains automated tests for the Commonwealth Bank website's navigation menu, testing both mobile and desktop views.
+
+## Features
+
+- Tests navigation menu items in both mobile and desktop views
+- Handles responsive design with automatic viewport detection
+- Includes detailed logging for debugging
+- Generates HTML reports with test results
+- Supports video recording of test execution
+
+## Prerequisites
+
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd cba-task
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+## Running Tests
+
+### Desktop View
+
+To run tests in desktop view with visible browser:
+```bash
+npm run cy:open
+```
+
+To run tests in desktop view in headless mode:
+```bash
+npm run cy:run
+```
+
+### Mobile View
+
+To run tests in mobile view (375x812) with visible browser:
+```bash
+npm run cy:open:mobile
+```
+
+To run tests in mobile view in headless mode:
+```bash
+npm run cy:run:mobile
+```
+
+### Generating Reports
+
+To generate HTML reports with test results:
+```bash
+npm run cy:report
+```
+
+For mobile view reports:
+```bash
+npm run cy:report:mobile
+```
+
+## Test Structure
+
+The tests are located in `cypress/e2e/frontend.cy.js` and include:
+
+- Navigation menu tests for both mobile and desktop views
+- Automatic viewport detection
+- Handling of hamburger menu in mobile view
+- Verification of page loads and URL changes
+
+## Configuration
+
+The project uses the following key configurations:
+
+- `cypress.config.js`: Main Cypress configuration
+- `.eslintrc.js`: ESLint configuration for code quality
+- `package.json`: Project dependencies and scripts
+
+## Available Scripts
+
+- `cy:open`: Opens Cypress in desktop view
+- `cy:run`: Runs tests in headless desktop view
+- `cy:open:mobile`: Opens Cypress in mobile view
+- `cy:run:mobile`: Runs tests in headless mobile view
+- `cy:report`: Generates HTML reports for desktop tests
+- `cy:report:mobile`: Generates HTML reports for mobile tests
+
+## Test Reports
+
+Test reports are generated using `cypress-mochawesome-reporter` and include:
+- Test results summary
+- Detailed test steps
+- Screenshots of failures
+- Video recordings of test execution
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## License
+
+This project is licensed under the ISC License.
 
 ## Frontend:
 
